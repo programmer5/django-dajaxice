@@ -37,7 +37,7 @@ var Dajaxice = {
 
         var send_data = 'argv='+encodeURIComponent(JSON.stringify(argv)),
             oXMLHttpRequest = new XMLHttpRequest,
-            endpoint = '{% url 'dajaxice-endpoint' %}'+dajaxice_function+'/';
+            endpoint = '{{dajaxice_config.DAJAXICE_SERVER_PREFIX}}'+'{% url 'dajaxice-endpoint' %}'+dajaxice_function+'/';
 
         if(method == 'GET'){
             endpoint = endpoint + '?' + send_data;

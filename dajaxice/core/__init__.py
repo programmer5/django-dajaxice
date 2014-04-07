@@ -10,7 +10,8 @@ class DajaxiceConfig(object):
     default_config = {'DAJAXICE_XMLHTTPREQUEST_JS_IMPORT': True,
                       'DAJAXICE_JSON2_JS_IMPORT': True,
                       'DAJAXICE_EXCEPTION': 'DAJAXICE_EXCEPTION',
-                      'DAJAXICE_MEDIA_PREFIX': 'dajaxice'}
+                      'DAJAXICE_MEDIA_PREFIX': 'dajaxice',
+                      'DAJAXICE_SERVER_PREFIX': ''}
 
     def __getattr__(self, name):
         """ Return the customized value for a setting (if it exists) or the
